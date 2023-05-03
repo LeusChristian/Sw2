@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time converter</title>
+</head>
+<body>
+    <style>
+body {
+  background-image: url('https://previews.123rf.com/images/yusakp/yusakp1510/yusakp151000045/46319255-set-of-simple-watch-icon-in-different-time-laps.jpg');
+  background-repeat: no-repeat;
+}
+</style>
+
+     <p>Enter a Number: <input type="text" name="text" id="yourNo"></p>
+
+
+  <p><button onclick="timeConvert()">Click to convert minutes to hours and seconds</button></p>
+
+  <!-- Result will Display Here-->
+
+  <p id="result"></p>
+
+  <script>function timeConvert() {
+      // body...
+
+      let num = document.getElementById('yourNo').value;
+
+
+      var hours = Math.floor(num / 60);
+      var minutes = num % 60;
+      var seconds = num * 60;
+      var hours = num / 60
+
+      //Print EveryThing and LOOK VERY CAREFULLY NOW!!!
+
+      document.getElementById("result").innerHTML = hours + ":" + minutes + "<br>" + "( " + hours + " Hours & " + minutes + " Minutes )";
+      document.getElementById("result").innerHTML = hours + ":" + seconds + "<br>" + "( " + hours + " hours & " + seconds + " seconds )";
+    }
+</script>
